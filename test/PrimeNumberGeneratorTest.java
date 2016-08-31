@@ -48,8 +48,7 @@ public class PrimeNumberGeneratorTest {
 
     @Test
     public void whenTwoThroughTenIsEnteredItReturnsPrimes() {
-        List<Integer> output = Arrays.asList(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43,
-                47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97);
+        List<Integer> output = Arrays.asList(2, 3, 5, 7);
         assertEquals(output, primeNumberGenerator.generate(2, 10));
     }
 
@@ -58,6 +57,12 @@ public class PrimeNumberGeneratorTest {
         List<Integer> output = Arrays.asList(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43,
                 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97);
         assertEquals(output, primeNumberGenerator.generate(1, 100));
+    }
+
+    @Test
+    public void whenMaxValueIsEnteredItReturnsMaxValue() {
+        List<Integer> output = Arrays.asList(Integer.MAX_VALUE);
+        assertEquals(output, primeNumberGenerator.generate(Integer.MAX_VALUE, Integer.MAX_VALUE));
     }
 
 }

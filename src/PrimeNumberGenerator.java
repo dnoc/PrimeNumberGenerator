@@ -7,7 +7,7 @@ public class PrimeNumberGenerator {
         if (value < 2) return false;
         if (value == 2) return true;
         if (value % 2 == 0) return false;
-        for (int i = 3; i * i <= value; i += 2) {
+        for (int i = 3; i <= Math.sqrt(value); i += 2) {
             if (value % i == 0) return false;
         }
         return true;
@@ -18,6 +18,7 @@ public class PrimeNumberGenerator {
 
         for (int i = startingValue; i <= endingValue; i++) {
             if (isPrime(i)) primeList.add(i);
+            if (i == Integer.MAX_VALUE) break;
         }
 
         return primeList;
