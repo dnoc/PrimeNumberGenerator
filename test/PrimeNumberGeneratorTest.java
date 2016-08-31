@@ -61,4 +61,10 @@ public class PrimeNumberGeneratorTest {
         List<Integer> output = Arrays.asList(Integer.MAX_VALUE);
         assertEquals(output, primeNumberGenerator.generate(Integer.MAX_VALUE, Integer.MAX_VALUE));
     }
+
+    @Test
+    public void when7900Through7920IsEnteredItReturnsPrimes() {
+        List<Integer> output = Arrays.asList(7901, 7907, 7919);
+        assertEquals(output, primeNumberGenerator.generate(7900, 7919));
+    }
 }
