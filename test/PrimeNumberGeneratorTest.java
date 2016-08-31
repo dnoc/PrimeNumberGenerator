@@ -48,11 +48,8 @@ public class PrimeNumberGeneratorTest {
 
     @Test
     public void whenTwoThroughTenIsEnteredItReturnsPrimes() {
-        List<Integer> output = new ArrayList<>();
-        output.add(2);
-        output.add(3);
-        output.add(5);
-        output.add(7);
+        List<Integer> output = Arrays.asList(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43,
+                47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97);
         assertEquals(output, primeNumberGenerator.generate(2, 10));
     }
 
