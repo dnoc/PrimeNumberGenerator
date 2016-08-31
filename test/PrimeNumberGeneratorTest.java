@@ -24,4 +24,15 @@ public class PrimeNumberGeneratorTest {
         List<Integer> output = new ArrayList<>();
         assertEquals(output, primeNumberGenerator.generate(4, 4));
     }
+
+    @Test
+    public void whenTwoThroughTenIsEnteredItReturnsPrimes() {
+        List<Integer> output = new ArrayList<>();
+        output.add(2);
+        output.add(3);
+        output.add(5);
+        output.add(7);
+        assertEquals(output, primeNumberGenerator.generate(2, 10));
+    }
+
 }
