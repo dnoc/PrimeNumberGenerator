@@ -13,6 +13,18 @@ public class PrimeNumberGeneratorTest {
     }
 
     @Test
+    public void whenLessThanTwoIsEnteredItReturnsNothing() {
+        List<Integer> output = new ArrayList<>();
+        assertEquals(output, primeNumberGenerator.generate(0, 1));
+    }
+
+    @Test
+    public void whenANegativeIsEnteredItReturnsNothing() {
+        List<Integer> output = new ArrayList<>();
+        assertEquals(output, primeNumberGenerator.generate(-3, -3));
+    }
+
+    @Test
     public void whenTwoIsEnteredItReturnsTwo() {
         List<Integer> output = new ArrayList<>();
         output.add(2);

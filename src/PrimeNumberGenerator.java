@@ -4,6 +4,7 @@ import java.util.List;
 public class PrimeNumberGenerator {
 
     private boolean isPrime(int value) {
+        if (value < 2) return false;
         if (value == 2) return true;
         if (value % 2 == 0) return false;
         for (int i = 3; i < value; i++) {
