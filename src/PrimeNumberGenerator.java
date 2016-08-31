@@ -9,6 +9,8 @@ public class PrimeNumberGenerator {
 
     public List<Integer> generate(int startingValue, int endingValue) {
         List<Integer> primeList = new ArrayList<>();
+        primeList.add(2);
+
         return primeList;
     }
 

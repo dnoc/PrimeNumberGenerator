@@ -18,4 +18,10 @@ public class PrimeNumberGeneratorTest {
         output.add(2);
         assertEquals(output, primeNumberGenerator.generate(2, 2));
     }
+
+    @Test
+    public void whenFourIsEnteredItReturnsNothing() {
+        List<Integer> output = new ArrayList<>();
+        assertEquals(output, primeNumberGenerator.generate(4, 4));
+    }
 }
