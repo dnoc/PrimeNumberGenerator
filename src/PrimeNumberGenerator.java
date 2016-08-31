@@ -15,8 +15,17 @@ public class PrimeNumberGenerator {
 
     public List<Integer> generate(int startingValue, int endingValue) {
         List<Integer> primeList = new ArrayList<>();
+        int start, end;
 
-        for (int i = startingValue; i <= endingValue; i++) {
+        if (startingValue > endingValue) {
+            start = endingValue;
+            end = startingValue;
+        } else {
+            start = startingValue;
+            end = endingValue;
+        }
+
+        for (int i = start; i <= end; i++) {
             if (isPrime(i)) primeList.add(i);
             if (i == Integer.MAX_VALUE) break;
         }

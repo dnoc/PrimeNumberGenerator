@@ -67,4 +67,17 @@ public class PrimeNumberGeneratorTest {
         List<Integer> output = Arrays.asList(7901, 7907, 7919);
         assertEquals(output, primeNumberGenerator.generate(7900, 7919));
     }
+
+    @Test
+    public void whenTwoThroughTenIsEnteredInReverseOrderItReturnsPrimes() {
+        List<Integer> output = Arrays.asList(2, 3, 5, 7);
+        assertEquals(output, primeNumberGenerator.generate(10, 2));
+    }
+
+    @Test
+    public void whenOneThroughHundredIsEnteredInReverseOrderItReturnsPrimes() {
+        List<Integer> output = Arrays.asList(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43,
+                47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97);
+        assertEquals(output, primeNumberGenerator.generate(100, 1));
+    }
 }
