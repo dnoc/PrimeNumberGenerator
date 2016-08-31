@@ -25,6 +25,14 @@ public class PrimeNumberGeneratorTest {
     }
 
     @Test
+    public void whenANegativeRangeIsEnteredItReturnsNoNegatives() {
+        List<Integer> output = new ArrayList<>();
+        output.add(2);
+        output.add(3);
+        assertEquals(output, primeNumberGenerator.generate(-5, 3));
+    }
+
+    @Test
     public void whenTwoIsEnteredItReturnsTwo() {
         List<Integer> output = new ArrayList<>();
         output.add(2);
